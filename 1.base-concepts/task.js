@@ -18,8 +18,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let monthPercent = percent / 100 / 12;
   let deltaCredit = amount - contribution;
   let monthPay = deltaCredit * (monthPercent + (monthPercent / (((1 + monthPercent)**countMonths) - 1)));
-  let totalPay = monthPay * countMonths;
+  let totalPay = parseFloat((monthPay * countMonths).toFixed(2));
 
-  return totalPay;
-  console.log(totalPay.toFixed(2)) 
+  return totalPay; 
 }
