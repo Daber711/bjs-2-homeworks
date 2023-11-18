@@ -12,7 +12,14 @@ function solveEquation(a, b, c) {
   }
 
   return arr;
+}
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  
+  let monthPercent = percent / 100 / 12;
+  let deltaCredit = amount - contribution;
+  let monthPay = deltaCredit * (monthPercent + (monthPercent / (((1 + monthPercent)**countMonths) - 1)));
+  let totalPay = monthPay * countMonths;
+
+  return totalPay;
+  console.log(totalPay.toFixed(2)) 
 }
