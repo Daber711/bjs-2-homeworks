@@ -1,22 +1,18 @@
 function getArrayParams(...arr) {
-	let min, max, sum, avg;
+	let min, max, sum;
 	min = Infinity;
 	max = -Infinity;
- 
+	sum = min + max;
+	avg = parseFloat((sum / 3).toFixed(2));
 	for (let i = 0; i < arr.length; i++) {
-		 if (arr[i] > max) {
-			  max = arr[i]
-		 }
-		 else if (arr[i] < min) {
-			  min = arr[i]
-		 }
-			  sum = arr[i];
-			  avg = min + max + sum / 3;
-			  avg.toFixed();
-			  avg = Number(avg);
+	  if (arr[i] > max) {
+		 max === arr[i];
+	  }else if (arr[i] < min) {
+		 min === arr[i];
+	  }
 	}
 	return { min: min, max: max, avg: avg };
-}
+ }
 
 function summElementsWorker(...arr) {
 
