@@ -3,7 +3,7 @@ function getArrayParams(...arr) {
 	min = Infinity;
 	max = -Infinity;
 	sum = min + max;
-	avg = parseFloat((sum / 3).toFixed(2));
+	avg = parseFloat((sum / arr.length).toFixed(2));
 	for (let i = 0; i < arr.length; i++) {
 	  if (arr[i] > max) {
 		 max === arr[i];
