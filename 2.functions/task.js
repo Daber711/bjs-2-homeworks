@@ -1,16 +1,17 @@
 function getArrayParams(...arr) {
 	let min, max, sum;
-	min = Infinity;
-	max = -Infinity;
-	sum = min + max;
-	avg = parseFloat((sum / arr.length).toFixed(2));
+	min = arr.shift();
+	max = arr.shift();
+	sum = 0;
 	for (let i = 0; i < arr.length; i++) {
-	  if (arr[i] > max) {
+	  sum += arr[i]
+		if (arr[i] > max) {
 		 max === arr[i];
 	  }else if (arr[i] < min) {
 		 min === arr[i];
 	  }
 	}
+	avg = parseFloat((sum / arr.length).toFixed(2));
 	return { min: min, max: max, avg: avg };
  }
 
