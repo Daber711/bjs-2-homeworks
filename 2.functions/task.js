@@ -45,7 +45,7 @@ function differenceEvenOddWorker(...arr) {
 	sumOddElement += arr[i];
 	 }
 	}
-	 return sumOddElement - sumEvenElement;
+	 return sumEvenElement - sumOddElement;
  }
 
 function averageEvenElementsWorker(...arr) {
