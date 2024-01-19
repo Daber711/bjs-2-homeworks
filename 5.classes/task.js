@@ -88,3 +88,25 @@ class Library {
 		return book;
 	}
 }
+
+
+function debounceDecoratorNew(func, delay) {
+	let timeoutId = null;
+	wrapper.count = 0;
+	wrapper.allCount = 0;
+ 
+	function wrapper(...args) {
+ 
+	clearTimeout(timeoutId);
+	wrapper.allCount++;
+	timeoutId=setTimeout(()=>{
+		wrapper.count++;
+		func(...args);
+	}, delay);
+ 
+		if (wrapper.allCount==0) {
+			wrapper.count++;
+		return func(...args);
+	} 
+	}
+} 
